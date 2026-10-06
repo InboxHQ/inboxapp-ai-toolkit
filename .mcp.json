@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "inboxapp": {
+      "type": "http",
+      "url": "https://mcp2.inboxapp.com/mcp"
+    }
+  }
+}

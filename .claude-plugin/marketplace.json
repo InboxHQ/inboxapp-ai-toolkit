@@ -1,0 +1,13 @@
+{
+  "name": "inboxapp",
+  "description": "The Inboxapp plugin: your team's inbox as tools and skills for an agent.",
+  "owner": {
+    "name": "Inboxapp"
+  },
+  "plugins": [
+    {
+      "name": "inboxapp",
+      "source": "./"
+    }
+  ]
+}

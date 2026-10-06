@@ -1,0 +1,36 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "inboxapp",
+  "version": "0.1.0",
+  "description": "Read and act on your team's conversations across messaging platforms.",
+  "author": {
+    "name": "Inboxapp",
+    "url": "https://inboxapp.com"
+  },
+  "homepage": "https://inboxapp.com",
+  "repository": "https://github.com/inboxhq/inboxapp-ai-toolkit",
+  "license": "MIT",
+  "keywords": ["inbox", "messaging", "dm", "crm", "sales"],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Inboxapp",
+        "shortDescription": "Your team's DMs, in one inbox",
+        "longDescription": "Inboxapp is a shared inbox for your team's direct messages. This plugin lets an agent read threads, draft and send replies, and keep contacts tagged, assigned and moved through your pipeline. Every send, edit and delete goes through your connected accounts, so the agent asks before it writes.",
+        "developerName": "Inboxapp",
+        "category": "Productivity",
+        "capabilities": ["Read", "Write"],
+        "websiteURL": "https://inboxapp.com",
+        "privacyPolicyURL": "https://inboxapp.com/privacy",
+        "termsOfServiceURL": "https://inboxapp.com/terms",
+        "defaultPrompt": [
+          "Which conversations are waiting on a reply from us?",
+          "Draft a reply to the latest message from this contact"
+        ],
+        "brandColor": "#020617",
+        "composerIcon": "./assets/icon.png",
+        "logo": "./assets/icon.png"
+      }
+    }
+  }
+}

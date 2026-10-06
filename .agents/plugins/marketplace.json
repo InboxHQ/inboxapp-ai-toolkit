@@ -1,0 +1,20 @@
+{
+  "name": "inboxapp",
+  "interface": {
+    "displayName": "Inboxapp"
+  },
+  "plugins": [
+    {
+      "name": "inboxapp",
+      "source": {
+        "source": "local",
+        "path": "./"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+# Inboxapp AI toolkit
+
+The Inboxapp plugin for Claude, Codex, ChatGPT and Cursor. It connects an agent to your team's inbox through the Inboxapp MCP server and adds three skills for the work people do there most.
+
+## What it does
+
+The plugin points at one remote MCP server, `https://mcp2.inboxapp.com/mcp`. It runs nothing on your machine and ships no scripts or hooks.
+
+Through that server an agent can:
+
+- list and search threads, and read their messages
+- send, edit, unsend and react to messages from your connected accounts
+- update contacts: status, tags, notes, valuation and assignee
+- archive, assign and delete threads
+- manage the team's tags and statuses
+
+The skills tell the agent how to use those tools well.
+
+| Skill | Use it to |
+| --- | --- |
+| `triage` | Find the conversations that need a reply and summarize them |
+| `reply` | Draft a message, show it to you, and send it once you approve |
+| `pipeline` | Tag, assign, and move contacts through your statuses |
+
+The agent asks before it sends a message or deletes anything.
+
+## Requirements
+
+You need an Inboxapp account on a team with API v2 access. API v2 is in private rollout, so the server answers `404` for teams that do not have it yet.
+
+## Install
+
+### Claude Code
+
+```sh
+claude plugin marketplace add inboxhq/inboxapp-ai-toolkit
+claude plugin install inboxapp@inboxapp
+```
+
+### Codex
+
+```sh
+codex plugin marketplace add inboxhq/inboxapp-ai-toolkit
+codex plugin add inboxapp
+```
+
+### Cursor
+
+Install from the Cursor marketplace once the plugin is listed. Until then, add the server to `.cursor/mcp.json`:
+
+```json
+{
+  "mcpServers": {
+    "inboxapp": { "url": "https://mcp2.inboxapp.com/mcp" }
+  }
+}
+```
+
+## Sign in
+
+The first tool call opens Inboxapp in your browser. Sign in, pick the team the agent should work in, and give the agent a name. Messages it sends are attributed to that name inside Inboxapp.
+
+The agent gets the same access you have in that team. You can disconnect it at any time under Settings, Integrations, Connected apps.
+
+## Data
+
+The plugin sends requests to `mcp2.inboxapp.com` and nowhere else. Sign-in happens on `inboxapp.com`. The plugin stores no credentials in this repository or in its config files. Your client holds the OAuth token.
+
+See the [privacy policy](https://inboxapp.com/privacy) and [terms](https://inboxapp.com/terms).
+
+## Develop
+
+The repository root is the plugin. Two clients read two manifest formats, so some values appear twice:
+
+| File | Read by |
+| --- | --- |
+| `plugin.json`, `mcp.json` | Codex, ChatGPT, Cursor |
+| `.claude-plugin/plugin.json`, `.mcp.json` | Claude |
+| `.claude-plugin/marketplace.json` | Claude marketplace |
+| `.agents/plugins/marketplace.json` | Codex marketplace |
+| `skills/` | all of them |
+
+`node scripts/check.mjs` fails when the name, version, description or server URL differ between the two formats. CI runs it together with `claude plugin validate --strict`.
+
+To try a change locally:
+
+```sh
+claude --plugin-dir .
+```
+
+Bump `version` in both manifests on every release. Clients that pin the version keep the old copy otherwise.
+
+## License
+
+MIT
