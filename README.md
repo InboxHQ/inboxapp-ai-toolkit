@@ -4,7 +4,7 @@ The Inboxapp plugin for Claude, Codex, ChatGPT and Cursor. It connects an agent 
 
 ## What it does
 
-The plugin points at one remote MCP server, `https://mcp2.inboxapp.com/mcp`. It runs nothing on your machine and ships no scripts or hooks.
+The plugin points at one remote MCP server, `https://mcp.inboxapp.com/mcp`. It runs nothing on your machine and ships no scripts or hooks.
 
 Through that server an agent can:
 
@@ -51,7 +51,7 @@ Install from the Cursor marketplace once the plugin is listed. Until then, add t
 ```json
 {
   "mcpServers": {
-    "inboxapp": { "url": "https://mcp2.inboxapp.com/mcp" }
+    "inboxapp": { "url": "https://mcp.inboxapp.com/mcp" }
   }
 }
 ```
@@ -64,7 +64,7 @@ The agent gets the same access you have in that team. You can disconnect it at a
 
 ## Data
 
-The plugin sends requests to `mcp2.inboxapp.com` and nowhere else. Sign-in happens on `inboxapp.com`. The plugin stores no credentials in this repository or in its config files. Your client holds the OAuth token.
+The plugin sends requests to `mcp.inboxapp.com` and nowhere else. Sign-in happens on `inboxapp.com`. The plugin stores no credentials in this repository or in its config files. Your client holds the OAuth token.
 
 See the [privacy policy](https://inboxapp.com/privacy) and [terms](https://inboxapp.com/terms).
 

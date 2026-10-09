@@ -3,7 +3,7 @@
   "mcpServers": {
     "inboxapp": {
       "type": "streamable-http",
-      "url": "https://mcp2.inboxapp.com/mcp"
+      "url": "https://mcp.inboxapp.com/mcp"
     }
   }
 }
