@@ -2,7 +2,7 @@
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "inboxapp",
   "version": "0.1.0",
-  "description": "Read and act on your team's conversations across messaging platforms.",
+  "description": "Message contacts and manage conversations across X and LinkedIn.",
   "author": {
     "name": "Inboxapp",
     "url": "https://inboxapp.com"
@@ -10,22 +10,24 @@
   "homepage": "https://inboxapp.com",
   "repository": "https://github.com/inboxhq/inboxapp-ai-toolkit",
   "license": "MIT",
-  "keywords": ["inbox", "messaging", "dm", "crm", "sales"],
+  "keywords": ["inbox", "messaging", "dm", "crm", "sales", "outreach", "team", "shared inbox", "x", "twitter", "linkedin"],
   "extensions": {
     "com.openai": {
       "interface": {
         "displayName": "Inboxapp",
-        "shortDescription": "Your team's DMs, in one inbox",
-        "longDescription": "Inboxapp is a shared inbox for your team's direct messages. This plugin lets an agent read threads, draft and send replies, and keep contacts tagged, assigned and moved through your pipeline. Every send, edit and delete goes through your connected accounts, so the agent asks before it writes.",
-        "developerName": "Inboxapp",
-        "category": "Productivity",
+        "shortDescription": "Message on X and LinkedIn",
+        "longDescription": "Inboxapp lets you message contacts and manage conversations across X and LinkedIn.\n\nConnect your X and LinkedIn accounts to handle your social conversations from one place, making it easier to stay in touch with the people who matter to you.\n\nUse Inboxapp to:\n- Message contacts on X and LinkedIn.\n- Triage your inbox: see who is waiting on a reply and which conversations need attention first.\n- Stay on top of follow-ups and spot conversations that have gone cold.\n- Search past conversations and catch up on any contact before you reach out.\n- Organize contacts with tags, statuses, and notes.\n\nSupport for Gmail, Instagram, WhatsApp, Telegram, and more platforms is on the way.\n\nWhether you’re reaching out for the first time or continuing a conversation, Inboxapp helps you keep everyday communication organized and spend less time switching between apps.",
+        "developerName": "INBOX TECH INC",
+        "category": "Communication",
         "capabilities": ["Read", "Write"],
         "websiteURL": "https://inboxapp.com",
         "privacyPolicyURL": "https://inboxapp.com/privacy",
         "termsOfServiceURL": "https://inboxapp.com/terms",
+        "supportURL": "https://docs.inboxapp.com",
         "defaultPrompt": [
-          "Which conversations are waiting on a reply from us?",
-          "Draft a reply to the latest message from this contact"
+          "Who do I need to reply to?",
+          "What conversations have gone cold?",
+          "Find people I should reconnect with."
         ],
         "brandColor": "#020617",
         "composerIcon": "./assets/icon.png",

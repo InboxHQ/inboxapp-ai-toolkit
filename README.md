@@ -6,6 +6,8 @@ The Inboxapp plugin for Claude, Codex, ChatGPT and Cursor. It connects an agent 
 
 The plugin points at one remote MCP server, `https://mcp.inboxapp.com/mcp`. It runs nothing on your machine and ships no scripts or hooks.
 
+It works with X and LinkedIn today. Gmail, Instagram, WhatsApp, Telegram and other platforms are on the way.
+
 Through that server an agent can:
 
 - list and search threads, and read their messages
@@ -23,6 +25,21 @@ The skills tell the agent how to use those tools well.
 | `pipeline` | Tag, assign, and move contacts through your statuses |
 
 The agent asks before it sends a message or deletes anything.
+
+## Example prompts
+
+- Who do I need to reply to?
+- What conversations have gone cold?
+- Find the conversation where someone mentioned [topic].
+- What did I last discuss with [person]?
+- Summarize everything I know about [person] from our conversations.
+- Who have I spoken to about [company/topic]?
+- What follow-ups am I overdue on?
+- Find people I should reconnect with.
+- Draft replies to the conversations that need my attention.
+- What did I tell [person] I would do?
+- Find all conversations related to [project].
+- Before my meeting with [person], catch me up on our relationship.
 
 ## Requirements
 

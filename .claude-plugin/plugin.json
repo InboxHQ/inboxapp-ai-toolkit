@@ -2,7 +2,7 @@
   "name": "inboxapp",
   "displayName": "Inboxapp",
   "version": "0.1.0",
-  "description": "Read and act on your team's conversations across messaging platforms.",
+  "description": "Message contacts and manage conversations across X and LinkedIn.",
   "author": {
     "name": "Inboxapp",
     "url": "https://inboxapp.com"
@@ -10,8 +10,9 @@
   "homepage": "https://inboxapp.com",
   "repository": "https://github.com/inboxhq/inboxapp-ai-toolkit",
   "license": "MIT",
-  "keywords": ["inbox", "messaging", "dm", "crm", "sales"],
+  "keywords": ["inbox", "messaging", "dm", "crm", "sales", "outreach", "team", "shared inbox", "x", "twitter", "linkedin"],
   "icon": "./assets/icon.png",
+  "supportUrl": "https://docs.inboxapp.com",
   "privacyPolicyUrl": "https://inboxapp.com/privacy",
   "termsOfServiceUrl": "https://inboxapp.com/terms"
 }
