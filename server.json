@@ -1,0 +1,21 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "com.inboxapp/inboxapp",
+  "title": "Inboxapp",
+  "description": "Shared inbox and CRM for your team's DMs on LinkedIn, X, Instagram, WhatsApp, Telegram and email.",
+  "version": "2.0.0",
+  "websiteUrl": "https://inboxapp.com",
+  "icons": [
+    {
+      "src": "https://inboxapp.com/web-app-manifest-512x512.png",
+      "mimeType": "image/png",
+      "sizes": ["512x512"]
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.inboxapp.com/mcp"
+    }
+  ]
+}
