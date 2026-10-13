@@ -13,6 +13,7 @@
   "keywords": ["inbox", "messaging", "dm", "crm", "sales", "outreach", "team", "shared inbox", "x", "twitter", "linkedin"],
   "icon": "./assets/icon.png",
   "supportUrl": "https://docs.inboxapp.com",
+  "documentationUrl": "https://docs.inboxapp.com",
   "privacyPolicyUrl": "https://inboxapp.com/privacy",
   "termsOfServiceUrl": "https://inboxapp.com/terms"
 }
