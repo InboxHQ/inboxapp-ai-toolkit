@@ -92,12 +92,13 @@ The repository root is the plugin. Two clients read two manifest formats, so som
 | File | Read by |
 | --- | --- |
 | `plugin.json`, `mcp.json` | Codex, ChatGPT, Cursor |
+| `.cursor-plugin/plugin.json` | Cursor, which also needs a `logo` that `plugin.json` can't hold |
 | `.claude-plugin/plugin.json`, `.mcp.json` | Claude |
 | `.claude-plugin/marketplace.json` | Claude marketplace |
 | `.agents/plugins/marketplace.json` | Codex marketplace |
 | `skills/` | all of them |
 
-`node scripts/check.mjs` fails when the name, version, description or server URL differ between the two formats. CI runs it together with `claude plugin validate --strict`.
+`node scripts/check.mjs` fails when the name, version, description or server URL differ between the manifests. CI runs it together with `claude plugin validate --strict`.
 
 To try a change locally:
 

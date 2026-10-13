@@ -1,0 +1,25 @@
+{
+  "name": "inboxapp",
+  "version": "0.1.0",
+  "description": "Message contacts and manage conversations across X and LinkedIn.",
+  "author": {
+    "name": "Inboxapp"
+  },
+  "homepage": "https://inboxapp.com",
+  "repository": "https://github.com/inboxhq/inboxapp-ai-toolkit",
+  "license": "MIT",
+  "keywords": [
+    "inbox",
+    "messaging",
+    "dm",
+    "crm",
+    "sales",
+    "outreach",
+    "team",
+    "shared inbox",
+    "x",
+    "twitter",
+    "linkedin"
+  ],
+  "logo": "assets/icon.png"
+}

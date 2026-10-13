@@ -6,6 +6,7 @@ const read = (path) => JSON.parse(readFileSync(join(root, path), "utf8"));
 
 const agent = read("plugin.json");
 const claude = read(".claude-plugin/plugin.json");
+const cursor = read(".cursor-plugin/plugin.json");
 const agentMcp = read("mcp.json");
 const claudeMcp = read(".mcp.json");
 const claudeMarket = read(".claude-plugin/marketplace.json");
@@ -22,7 +23,7 @@ const atMost = (label, value, max) => {
 };
 
 for (const field of ["name", "version", "description", "homepage", "repository", "license", "keywords"])
-  same(field, agent[field], claude[field]);
+  same(field, agent[field], claude[field], cursor[field]);
 
 same(
   "plugin name in marketplaces",
@@ -44,7 +45,7 @@ atMost("shortDescription", listing.shortDescription, 30);
 atMost("longDescription", listing.longDescription, 4000);
 atMost("developerName", listing.developerName, 80);
 
-for (const asset of [listing.composerIcon, listing.logo, claude.icon])
+for (const asset of [listing.composerIcon, listing.logo, claude.icon, cursor.logo])
   if (!existsSync(join(root, asset))) problems.push(`missing asset ${asset}`);
 
 for (const skill of readdirSync(join(root, "skills"))) {
