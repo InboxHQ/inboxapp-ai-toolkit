@@ -1,6 +1,6 @@
 # Inboxapp AI toolkit
 
-The Inboxapp plugin for Claude, Codex, ChatGPT and Cursor. It connects an agent to your team's inbox through the Inboxapp MCP server and adds four skills: one that explains Inboxapp to the agent, and three for the work people do there most.
+The Inboxapp plugin for Claude, Codex, ChatGPT, Cursor and Hermes. It connects an agent to your team's inbox through the Inboxapp MCP server and adds four skills: one that explains Inboxapp to the agent, and three for the work people do there most.
 
 ## What it does
 
@@ -84,6 +84,31 @@ Install from the Cursor marketplace once the plugin is listed. Until then, add t
 }
 ```
 
+### Hermes
+
+```sh
+hermes plugins install InboxHQ/inboxapp-ai-toolkit --no-enable
+hermes plugins enable inboxapp
+```
+
+The package marks the `inboxapp` server untrusted, so Hermes asks you before every tool the server does not mark read-only, such as sending a message or deleting a thread, and refuses those tools in unattended runs such as cron. Hermes ignores this setting before 0.21.6.
+
+Hermes signs in to a remote MCP server only when your own config asks for it, so add the server to `~/.hermes/config.yaml` and sign in once:
+
+```yaml
+mcp_servers:
+  inboxapp:
+    url: "https://mcp.inboxapp.com/mcp"
+    auth: oauth
+    trust: untrusted
+```
+
+```sh
+hermes mcp login inboxapp
+```
+
+This entry replaces the package's server, trust setting included, so keep `trust: untrusted` in it. Hermes keeps the token in `~/.hermes/mcp-tokens/`.
+
 ## Sign in
 
 The first tool call opens Inboxapp in your browser. Sign in, pick the team the agent should work in, and give the agent a name. Messages it sends are attributed to that name inside Inboxapp.
@@ -102,7 +127,7 @@ The repository root is the plugin. Two clients read two manifest formats, so som
 
 | File | Read by |
 | --- | --- |
-| `plugin.json`, `mcp.json` | Codex, ChatGPT, Cursor |
+| `plugin.json`, `mcp.json` | Codex, ChatGPT, Cursor, Hermes |
 | `.cursor-plugin/plugin.json` | Cursor, which also needs a `logo` that `plugin.json` can't hold |
 | `.claude-plugin/plugin.json`, `.mcp.json` | Claude |
 | `.claude-plugin/marketplace.json` | Claude marketplace |
