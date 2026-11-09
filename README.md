@@ -1,12 +1,12 @@
 # Inboxapp AI toolkit
 
-The Inboxapp plugin for Claude, Codex, ChatGPT and Cursor. It connects an agent to your team's inbox through the Inboxapp MCP server and adds three skills for the work people do there most.
+The Inboxapp plugin for Claude, Codex, ChatGPT and Cursor. It connects an agent to your team's inbox through the Inboxapp MCP server and adds four skills: one that explains Inboxapp to the agent, and three for the work people do there most.
 
 ## What it does
 
 The plugin points at one remote MCP server, `https://mcp.inboxapp.com/mcp`. It runs nothing on your machine and ships no scripts or hooks.
 
-It works with X and LinkedIn today. Gmail, Instagram, WhatsApp, Telegram and other platforms are on the way.
+It works with X, LinkedIn and WhatsApp today. Gmail, Instagram, Telegram and other platforms are on the way.
 
 Through that server an agent can:
 
@@ -20,6 +20,7 @@ The skills tell the agent how to use those tools well.
 
 | Skill | Use it to |
 | --- | --- |
+| `inboxapp` | Connect, learn what Inboxapp can do, and pick the right skill |
 | `triage` | Find the conversations that need a reply and summarize them |
 | `reply` | Draft a message, show it to you, and send it once you approve |
 | `pipeline` | Tag, assign, and move contacts through your statuses |
@@ -46,6 +47,16 @@ The agent asks before it sends a message or deletes anything.
 You need an Inboxapp account on a team with API v2 access. API v2 is in private rollout, so the server answers `404` for teams that do not have it yet.
 
 ## Install
+
+### Skills only
+
+Any agent that supports [skills](https://skills.sh) can add the four skills:
+
+```sh
+npx skills add InboxHQ/inboxapp-ai-toolkit
+```
+
+The skills call the MCP server, so connect it too: use a plugin below, or add `https://mcp.inboxapp.com/mcp` to your client.
 
 ### Claude Code
 
