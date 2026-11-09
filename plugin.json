@@ -33,6 +33,11 @@
         "composerIcon": "./assets/icon.png",
         "logo": "./assets/icon.png"
       }
+    },
+    "com.nousresearch.hermes": {
+      "servers": {
+        "inboxapp": { "trust": "untrusted" }
+      }
     }
   }
 }
