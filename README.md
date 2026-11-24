@@ -6,7 +6,7 @@ The Inboxapp plugin for Claude, Codex, ChatGPT, Cursor and Hermes. It connects a
 
 The plugin points at one remote MCP server, `https://mcp.inboxapp.com/mcp`. It runs nothing on your machine and ships no scripts or hooks.
 
-It works with X, LinkedIn and WhatsApp today. Gmail, Instagram, Telegram and other platforms are on the way.
+It works with X, LinkedIn, WhatsApp and Telegram today. Gmail, Instagram and other platforms are on the way.
 
 Through that server an agent can:
 
