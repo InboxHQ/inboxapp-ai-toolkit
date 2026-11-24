@@ -1,11 +1,11 @@
 ---
 name: inboxapp
-description: Inboxapp is a shared inbox and CRM for X, LinkedIn and WhatsApp DMs. Use when the user mentions Inboxapp or wants an agent to read, answer or organize their team's DMs, to connect to the Inboxapp MCP server or API, or when it is unclear which Inboxapp skill fits.
+description: Inboxapp is a shared inbox and CRM for X, LinkedIn, WhatsApp and Telegram DMs. Use when the user mentions Inboxapp or wants an agent to read, answer or organize their team's DMs, to connect to the Inboxapp MCP server or API, or when it is unclear which Inboxapp skill fits.
 ---
 
 # Inboxapp
 
-Inboxapp puts a team's DMs on X (including XChat), LinkedIn and WhatsApp in one inbox, with a CRM around them: contacts, statuses, tags, notes, deal values and assignees. Every platform uses the same resources, so ask what an account can do rather than which platform it is on.
+Inboxapp puts a team's DMs on X (including XChat), LinkedIn, WhatsApp and Telegram in one inbox, with a CRM around them: contacts, statuses, tags, notes, deal values and assignees. Every platform uses the same resources, so ask what an account can do rather than which platform it is on.
 
 ## Connect
 

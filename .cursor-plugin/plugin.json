@@ -1,7 +1,7 @@
 {
   "name": "inboxapp",
   "version": "0.1.0",
-  "description": "Message contacts and manage conversations across X and LinkedIn.",
+  "description": "Message contacts and manage conversations across X, LinkedIn, WhatsApp and Telegram.",
   "author": {
     "name": "Inboxapp"
   },
@@ -19,7 +19,9 @@
     "shared inbox",
     "x",
     "twitter",
-    "linkedin"
+    "linkedin",
+    "whatsapp",
+    "telegram"
   ],
   "logo": "assets/icon.png"
 }
